@@ -167,6 +167,7 @@ def gen_token():
 
 #-------------------ADMIN MANAGEMENT-----------------------------
 @api.route('/admin',methods=['POST'])
+@apiAuth
 def admin():
     username=request.json["username"]
     password=request.json["password"]
